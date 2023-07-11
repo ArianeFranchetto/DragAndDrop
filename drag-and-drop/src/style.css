@@ -1,3 +1,4 @@
 body {
-    background-color: aqua;
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(199,149,200,1) 38%);
 }

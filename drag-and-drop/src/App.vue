@@ -6,7 +6,12 @@ export default {
     const items = ref ([
     {id: 0, title: 'Item A', list: 1},
     {id: 1, title: 'Item B', list: 1},
-    {id: 2, title: 'Item C', list: 2}
+    {id: 2, title: 'Item C', list: 1},
+    {id: 3, title: 'Item D', list: 1},
+    {id: 4, title: 'Item E', list: 1},
+    {id: 5, title: 'Item F', list: 1},
+  
+    
     ])
   
 const getList = (list) => {
@@ -47,6 +52,9 @@ return {
 @dragenter.prevent
 @dragover.prevent
 >
+
+<div><h3>Pendente</h3></div>
+
 <div 
     v-for="item in getList(1)" 
     :key="item.id" 
@@ -64,6 +72,8 @@ return {
 @dragenter.prevent
 @dragover.prevent
 >
+
+<div><h3>Concluído</h3></div>
     <div 
     v-for="item in getList(2)" 
     :key="item.id" 
@@ -84,24 +94,30 @@ return {
   -moz-osx-smoothing: grayscale;
   text-align: center;
   color: beige;
-  background-color: aqua;
-  margin-top: 60px;
+
 }
 
 .drop-zone {
-  width: 50px;
+  width: 250px;
+  height: 250px;
   margin: 50px auto;
-  background-color: blue;
+  background-color: rgb(63, 33, 60);
   padding: 10px;
-  min-height: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+
 
 }
 
 .drag-el {
   background-color: aquamarine;
-  color: white;
-  padding: 5px;
-  margin-bottom: 10px;
+  color: rgb(144, 92, 92);
+  width: 50px;
+  height: 50px;
+
 }
 
 .drag-el:nth-last-of-type(1) {
